@@ -3,136 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harshada Ladole | UI/UX Designer</title>
-
+<title>Harshada | Graphic Designer</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="particles-js"></div>
+    <!-- Particle JS Library -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 60
+    },
+    color: {
+      value: "#00aaff"
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.5
+    },
+    size: {
+      value: 4,
+      random: true
+    },
+    move: {
+      speed: 2
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#00aaff",
+      opacity: 0.4,
+      width: 1
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse"
+      }
+    }
+  }
+});
+</script>
+<!-- Lightbox 
+<div id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightbox-img" src="">
+</div>-->
+<!-- Lightbox -->
+<div id="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightbox-img">
+</div>
+</body>
+
 
 <!-- Navbar -->
 <header class="navbar">
-  <div class="container nav-content">
-    <h2 class="logo">Harshada</h2>
+    <h2 class="logo">HL</h2>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Work</a>
-      <a href="#contact">Contact</a>
-      <a href="Harshada_immediateJoiner_UIUX.pdf" download class="btn-outline">Resume</a>
+        <a href="#work">Work</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </div>
 </header>
 
 <!-- Hero -->
 <section class="hero">
-  <canvas id="bgCanvas"></canvas>
-  <div class="container hero-grid">
 
-    <div class="hero-text">
-      <h1>UI/UX Designer<br>Crafting Meaningful Digital Experiences</h1>
-      <p>
-        I design intuitive products that solve real problems through research,
-        usability and clean visual design.
-      </p>
+    <!-- Floating Circles -->
+    <div class="floating circle1"></div>
+    <div class="floating circle2"></div>
+    <div class="floating circle3"></div>
+    <div class="floating circle4"></div>
+    <div class="floating circle5"></div>
+    <div class="floating circle6"></div>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View Work</a>
-        <a href="https://www.behance.net/harshadaladole" target="_blank" class="btn-outline">
-          Behance
-        </a>
-      </div>
+    <div class="hero-content">
+        <h1>Harshada Ladole</h1>
+        <h2>Graphic Designer</h2>
+        <br>
+        <p>Branding • Social Media • Canva • UI Design</p>
+        <br>
+        <br>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
 
-    <div class="hero-image">
-      <img src="image.jpg" alt="Harshada">
-    </div>
-
-  </div>
 </section>
 
+<!-- Work -->
+<!-- WORK SECTION -->
+<section id="work" class="section">
+    <h2>Selected Work</h2>
+
+    <div class="gallery">
+
+        <div class="card" onclick="openLightbox(this)">
+       <!----  <img src="images/social1.jpg" onclick="openLightbox(this.src)">-->
+          <img src="images/social1.jpg" onclick="openLightbox(this.src)" alt="">
+            <div class="overlay-text">Instagram Campaign</div>
+        </div>
+
+        <div class="card" onclick="openLightbox(this)">
+            <img src="images/poster1.jpg"onclick="openLightbox(this.src)"alt="">
+            <div class="overlay-text">Event Poster</div>
+        </div>
+
+        <div class="card" onclick="openLightbox(this)">
+            <img src="images/logo1.jpg"onclick="openLightbox(this.src)"alt="">
+            <div class="overlay-text">Brand Identity</div>
+        </div>
+
+        <div class="card" onclick="openLightbox(this)">
+            <img src="images/social2.jpg"onclick="openLightbox(this.src)"alt="">
+            <div class="overlay-text">Product Promotion</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
+
+<!-- Videos (3 only) -->
+<section id="videos" class="section dark">
+    <h2>Video Portfolio</h2>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/work1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/work2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="videos/work3.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</section>
 <!-- About -->
 <section id="about" class="section">
-  <div class="container about-grid">
-    <div>
-      <h2>About Me</h2>
-      <p>
-        I’m a UI/UX Designer focused on research-driven design, user journeys,
-        wireframing, and scalable design systems. I enjoy solving complex problems
-        and turning them into simple, user-friendly experiences.
-      </p>
-    </div>
+    <h2>About Me</h2>
+    <br>
+    <p class="about-text">
+        Creative Graphic Designer specializing in social media creatives,
+        branding, and marketing visuals that help brands grow.
+    </p>
+    <br>
 
     <div class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>UX Research</li>
-        <li>Wireframing</li>
-        <li>Prototyping</li>
-        <li>UI Design</li>
-        <li>Design Systems</li>
-        <li>Figma</li>
-      </ul>
+        <span>Photoshop</span>
+        <span>Illustrator</span>
+        <span>Canva</span>
+        <span>Figma</span>
+        <span>Branding</span>
+        <span>Social Media Design</span>
     </div>
-  </div>
 </section>
-
-<section id="projects" class="section dark projects-section">
-  
-  <!-- Animated Gradient Background -->
-  <div class="projects-bg"></div>
-
-  <div class="container projects-content">
-    <h2 class="section-title">Selected Work</h2>
-
-    <div class="projects-grid">
-
-      <a href="https://www.behance.net/gallery/220917123/Medmeet" target="_blank" class="project-card">
-        <img src="MEDMEET.jpg">
-        <div class="project-content">
-          <h3>MedMeet</h3>
-          <p>Healthcare appointment experience</p>
-          <span>View Case Study →</span>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/230589329/Pawpal" target="_blank" class="project-card">
-        <img src="PAWPAL.jpg">
-        <div class="project-content">
-          <h3>PawPal</h3>
-          <p>Pet adoption & care platform</p>
-          <span>View Case Study →</span>
-        </div>
-      </a>
-
-      <a href="https://www.behance.net/gallery/223598223/SWISWIFT" target="_blank" class="project-card">
-        <img src="swiswift.jpg">
-        <div class="project-content">
-          <h3>Swiswift</h3>
-          <p>Business website redesign</p>
-          <span>View Case Study →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
+<br>
 <!-- Contact -->
-<section id="contact" class="section">
-  <div class="container contact-box">
-    <h2>Let’s Work Together</h2>
-    <p>Pune, India</p>
+<section id="contact" class="section dark">
+    <h2>Contact</h2>
+    <br>
     <p>Email: hsladole@gmail.com</p>
-    <p>Phone: +91 9579538650</p>
-  </div>
+    <p>Phone: 9579538650</p>
 </section>
 
 <footer>
-  <p>© 2026 Harshada Ladole</p>
+    <p>© 2026 Harshada Ladole</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
